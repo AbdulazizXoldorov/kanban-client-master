@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #635fc7;
+  --primary-hover: #a8a4ff;
+  --clr-900: #000112;
+  --clr-800: #20212c;
+  --clr-700: #2b2c37;
+  --clr-500: #3e3f4e;
+  --clr-400: #828fa3;
+  --clr-300: #e4ebfa;
+  --clr-200: #f4f7fd;
+  --clr-red-500: #ea5555;
+  --clr-red-300: #ff9898;
+}
+
+.board_heading {
+  color: var(--clr-400);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  margin-left: 34px;
+  margin-bottom: 19px;
+}
+
+.active-navlink .board_item,
+.active-navlink .board_item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.active-navlink .board_item svg path,
+.active-navlink .board_item:hover svg path {
+  fill: #fff;
+}
+
+.board_item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 32px;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.board_item:hover {
+  background: rgba(99, 95, 199, 0.1);
+  color: var(--primary-color);
+}
+.board_item:hover svg path {
+  fill: var(--primary-color);
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  line-height: normal;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: 300ms;
+}
+.btn:disabled {
+  background: #a9beeb !important;
+}
+.btn:disabled:hover {
+  background: #a9beeb !important;
+}
+
+.btn:hover {
+  background: var(--primary-hover) !important;
+}
+
+.empty_board {
+  min-height: calc(100vh - 114px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
